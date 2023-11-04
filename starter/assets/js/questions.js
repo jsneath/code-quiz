@@ -5,10 +5,10 @@
 var questions = [
     {
         question: "What is 4 + 8",
-        answers: ["11",
-            "12",
-            "48",
-            "4848484"],
+        answers: ["1. 11",
+            "2. 12",
+            "3. 48",
+            "4. 4848484"],
             correctAnswerIndex: 1
     },
     {
