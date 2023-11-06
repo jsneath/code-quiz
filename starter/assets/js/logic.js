@@ -8,12 +8,17 @@ var myChoices = document.querySelector("#choices")
 var endScreen = document.querySelector("#end-screen")
 var finalScore = document.querySelector("#final-score")
 var feedBack = document.querySelector("#feedback")
+var submitScore = document.querySelector("#submit")
+var userInitials = document.querySelector("#initials")
+var finalScore = document.querySelector("#final-score")
 // add an event listener for when the user selects start quiz
 
 var setTimer = 10
 
 startQuiz.addEventListener("click", function(event) {
     startScreen.style.display = 'none';
+    myQuestions.classList.remove('hide');
+    feedBack.classList.remove('hide')
     showQuestions()
     timer.textContent = setTimer
 
@@ -33,8 +38,6 @@ var currentQuestionIndex = 0
 
  function showQuestions() {
 
-    myQuestions.classList.remove('hide');
-    feedBack.classList.remove('hide')
     if (currentQuestionIndex < questions.length) {
         var currentQuestion = questions[currentQuestionIndex];
         questionTitle.textContent = currentQuestion.question;
@@ -69,6 +72,10 @@ myChoices.addEventListener("click",function(event){
             timer.textContent = setTimer;
         }
 
+        if (setTimer <= 0) {
+            endQuiz()
+        }
+
         if (index === questions[currentQuestionIndex].correctAnswerIndex) {
             userScore++;
             feedBack.textContent = "Correct!"
@@ -90,8 +97,32 @@ function endQuiz() {
     feedBack.classList.add('hide')
     finalScore.textContent = userScore;
     setTimer = 1
-    
+
 }
+
+
+submitScore.addEventListener("click", function(event) {
+    event.preventDefault(); 
+
+    var initials = userInitials.value.trim();
+    var finalScore = userScore
+
+    var newScore = {
+        initials: initials,
+        score: finalScore
+    };
+    var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+    highScores.push(newScore);
+    
+
+    localStorage.setItem("highscores", JSON.stringify(highScores));
+    
+    window.location.href = 'highscores.html'
+});
+
+
+
 
 
 
