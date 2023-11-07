@@ -12,8 +12,8 @@ var submitScore = document.querySelector("#submit")
 var userInitials = document.querySelector("#initials")
 var finalScore = document.querySelector("#final-score")
 // add an event listener for when the user selects start quiz
-
-var setTimer = 10
+// started a timer on event listener
+var setTimer = 60
 
 startQuiz.addEventListener("click", function(event) {
     startScreen.style.display = 'none';
@@ -33,7 +33,7 @@ startQuiz.addEventListener("click", function(event) {
     }, 1000);
     }
 )
-
+// Takes next question
 var currentQuestionIndex = 0
 
  function showQuestions() {
@@ -45,6 +45,7 @@ var currentQuestionIndex = 0
     } 
 }
 
+// list answers and converts to list and button
 function listAnswers(answers) {
     myChoices.innerHTML = '';
     var ol = document.createElement('ol');
@@ -59,6 +60,9 @@ function listAnswers(answers) {
       myChoices.appendChild(ol);
 }
 
+
+// controls user score - right/wrong and reduces time on wrong answer. 
+// After each button it adds a plus 1 to the currentQuestionIndex
 var userScore = 0
 
 myChoices.addEventListener("click",function(event){
@@ -91,6 +95,8 @@ myChoices.addEventListener("click",function(event){
     }
 })
 
+// function to end quiz. Hides and unhides all relevant content 
+
 function endQuiz() {
     myQuestions.classList.add('hide');
     endScreen.classList.remove('hide');
@@ -100,7 +106,7 @@ function endQuiz() {
 
 }
 
-
+// User submits score and initials. It then stores the score in localStorage. 
 submitScore.addEventListener("click", function(event) {
     event.preventDefault(); 
 
@@ -121,20 +127,3 @@ submitScore.addEventListener("click", function(event) {
     window.location.href = 'highscores.html'
 });
 
-
-
-
-
-
-
-
-
-// do a for loop through all questions array. Questions/answers stored as object?
-// if statement for correct answer 0 points - timer reduction
-// onto next question
-
-// if user clicks correct answer add 1 point to users score
-// if user clicks incorrect answer - minus 10 seconds from timer & 0 points score
-// when timer reaches 0 the quiz stops 
-// the user is presented with their score and to enter their name
-// The users score is updated to high scores and stored
