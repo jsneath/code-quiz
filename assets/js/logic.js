@@ -11,10 +11,13 @@ var feedBack = document.querySelector("#feedback")
 var submitScore = document.querySelector("#submit")
 var userInitials = document.querySelector("#initials")
 var finalScore = document.querySelector("#final-score")
-// add an event listener for when the user selects start quiz
-// started a timer on event listener
+
+
+
+// sets length of timer 
 var setTimer = 60
 
+// add an event listener for when the user selects start quiz
 startQuiz.addEventListener("click", function(event) {
     startScreen.style.display = 'none';
     myQuestions.classList.remove('hide');
@@ -33,7 +36,7 @@ startQuiz.addEventListener("click", function(event) {
     }, 1000);
     }
 )
-// Takes next question
+// Takes next question - index of the question to be shown
 var currentQuestionIndex = 0
 
  function showQuestions() {

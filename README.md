@@ -1,88 +1,36 @@
-# Module 6 Challenge Web APIs: Code Quiz
+# Quiz Game
 
-## Your Task
+Welcome to the Quiz Game project! This engaging web application provides a fun and interactive way to test your knowledge on various topics through timed quizzes.
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+## Features
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
+- **Dynamic Quiz Questions**: Users are presented with a series of questions, each with multiple-choice answers.
+- **Timed Challenges**: Each quiz is timed, adding an extra layer of challenge and excitement.
+- **Immediate Feedback**: Users receive instant feedback on their answers, knowing immediately if they've answered correctly or incorrectly.
+- **Score Tracking**: Scores are tracked throughout the quiz, providing users with a final tally at the end of the game.
+- **Penalty for Incorrect Answers**: Incorrect answers result in a time penalty, increasing the challenge.
+- **Local High Scores**: Users can save their scores locally to compete against themselves or friends.
 
+## How to Use
 
-## User Story
+1. Open the application in your web browser.
+2. Click the "Start Quiz" button to begin.
+3. Answer the questions as they appear on the screen.
+4. Keep an eye on the timer! Incorrect answers will penalize your remaining time.
+5. Once you complete the quiz, your score is displayed. Enter your initials to save your score to the high score list.
+6. View the high score list to see where you rank.
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+## Technologies Used
 
-## Acceptance Criteria
-
-Create a code quiz that contains the following requirements:
-
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+- **HTML**: Structures the content on the web page.
+- **CSS**: Styles the layout and look of the quiz.
+- **JavaScript**: Powers the game logic, event handling, and local storage for high scores.
 
 
-## Review
 
-You are required to submit BOTH of the following for review:
+## Links
 
-* The URL of the functional, deployed application.
+Live URL: https://jsneath.github.io/code-quiz/
+Repository: https://github.com/jsneath/code-quiz
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+![Quiz Game Screenshot](quiz.png)
